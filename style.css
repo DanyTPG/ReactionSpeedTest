@@ -1,0 +1,45 @@
+            body {
+                font-family: sans-serif;
+				background-color: #444;
+				text-align: center;
+				color: white;
+            }
+			#start {
+                margin: auto;
+                width: 100%;
+                background-color:  #4e0073;
+                display: flex;
+                justify-content: center;
+				font-size: 40;
+				align-items: center;
+				height: 400px;
+				
+
+            }
+			#soon {
+                margin: auto;
+                width: 100%;
+                background-color:  #4e0073;
+                display: none;
+                justify-content: center;
+				font-size: 40;
+				align-items: center;
+				height: 400px;
+				
+
+            }
+            #shape {
+                
+                width: 100%;
+                height: 400px;
+                background-color:  #a10000;
+                display: none;
+                position: relative;
+				
+                
+            }
+            #para{
+                
+                font-weight: bold;
+            }
+            
