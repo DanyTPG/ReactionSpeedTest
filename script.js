@@ -10,7 +10,7 @@ function makeShapeAppear() {
 
 async function appearAfterDelay() {
 	document.getElementById("shape").style.background = "#a10000";
-    timer = Math.floor(Math.random() * 2000 + 1000);
+    timer = Math.floor(Math.random() * 2500 + 1800);
     await setTimeout(makeShapeAppear, timer);
     start = new Date().getTime() + timer;
 }
