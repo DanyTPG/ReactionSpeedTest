@@ -61,6 +61,7 @@ document.getElementById("soon").onclick = function() {
 
 
 document.getElementById("start").onclick = function() {
+	document.getElementById("progress").innerHTML = "0/5";
 	document.getElementById("start").style.display = "none";
 	document.getElementById("shape").style.display = "block";
 	appearAfterDelay();
