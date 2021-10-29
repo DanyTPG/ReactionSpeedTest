@@ -1,24 +1,25 @@
 var start, end, timeTaken, c = 0;
 var average = 0;
 var date = new Date();
-var color = 'green'
+var green = 'green';
+var red = '#a10000';
 
 function makeShapeAppear() {
-
-    document.getElementById("shape").style.background = color;	
+	var time = new Date().getTime();
+	if (time >= start) document.getElementById("shape").style.background = green;	
 }
 
-async function appearAfterDelay() {
-	document.getElementById("shape").style.background = "#a10000";
-    timer = Math.floor(Math.random() * 3000 + 1800);
-    await setTimeout(makeShapeAppear, timer);
-    start = new Date().getTime() + timer;
+function appearAfterDelay() {
+	document.getElementById("shape").style.background = red;
+   	timer = Math.floor(Math.random() * 3000 + 1800);
+   	setTimeout(makeShapeAppear, timer);
+	start = new Date().getTime() + timer;
 }
 
 
 document.getElementById("shape").onclick = function() {
 	document.getElementById("shape").innerHTML = "";
-    end = new Date().getTime();
+    	end = new Date().getTime();
 	timeTaken = end - start;
 
 	if(timeTaken < 0){
@@ -33,12 +34,13 @@ document.getElementById("shape").onclick = function() {
 			average+= timeTaken;
 			c++;
 			document.getElementById("progress").innerHTML = c + "/5";
-			if(c == 5) finish();
-			
-			document.getElementById("shape").style.background = "#a10000";
-
 			document.getElementById("timeTaken").innerHTML = timeTaken + " ms";
-
+			if(c == 5){
+				finish();
+				return;
+			}
+			
+			document.getElementById("shape").style.background = red;
 			appearAfterDelay();
 			}
 }
