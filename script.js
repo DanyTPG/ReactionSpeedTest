@@ -48,7 +48,7 @@ function finish(){
 	c = 0;
 	document.getElementById("shape").style.display = "none";
 	document.getElementById("start").style.display = "flex";
-	document.getElementById("start").innerHTML = "your average time: " + average/5;
+	document.getElementById("start").innerHTML = "Average Time: " + average/5 + " ms";
 	average = 0;
 }
 	
