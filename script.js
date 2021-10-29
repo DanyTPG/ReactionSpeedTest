@@ -13,7 +13,6 @@ async function appearAfterDelay() {
     timer = Math.floor(Math.random() * 2000 + 1000);
     await setTimeout(makeShapeAppear, timer);
     start = new Date().getTime() + timer;
-    document.getElementById("time").innerHTML = timer / 1000 ;	
 }
 
 
@@ -33,7 +32,7 @@ document.getElementById("shape").onclick = function() {
 			
 			average+= timeTaken;
 			c++;
-			
+			document.getElementById("progress").innerHTML = c + "/5";
 			if(c == 5) finish();
 			
 			document.getElementById("shape").style.background = "#a10000";
