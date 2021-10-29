@@ -24,7 +24,6 @@ document.getElementById("shape").onclick = function() {
 
 	if(timeTaken < 0){
 		
-		document.getElementById("timeTaken").innerHTML = "TOO SOON !!";
 		document.getElementById("shape").style.display = "none";
 		document.getElementById("soon").style.display = "flex";
 		
